@@ -6,8 +6,8 @@ function Pizza(names, toppings, size)  {
   this.price = price;
 
 }
-var tops = [];
-var Pizza = new Pizza(name, tops, size, price);
+// var tops = [];
+// var Pizza = new Pizza(name, tops, size, price);
 
 function names(input)  {
 return"Inputed Name"
@@ -16,14 +16,19 @@ return"Inputed Name"
 
 
 $(function() {
-  $("form#transportation_survey").submit(function(event){
+  $("form#pizzaForm").submit(function(event){
     event.preventDefault();
+    var orderTops = [];
+    var orderName = $("input#orderName").val();
+    var orderSize = $("input:radio[name=size]:checked").val();
     $("input:checkbox[name=toppings]:checked").each(function(){
-      var tops = $(this).val();
-      $('#work-responses').append(workTransportationMode + "<br>");
+      orderTops.push($(this).val());
     });
-    $('#transportation_survey').hide();
-  });
+    console.log(orderTops, orderSize, orderName);
+
+
+
+
 });
 
 });
