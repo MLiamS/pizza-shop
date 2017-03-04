@@ -44,15 +44,15 @@ $(function() {
     $("#order").append("<li>" + "Toppings: " + newPie.toppings + "</li>");
     $("#order").append("<li>" + "Price:  $" + price + "'s" +"</li>");
     $("#order").append("<li>" + "</li>");
-    This.reset();
+    document.getElementById("pizzaForm").reset();
     // addPrice(price, totalPrice);
     // console.log(price, totalPrice);
     // console.log(newPrice);
-});
+    });
     // $("#place").click(function(){
     //   $("#items").text("items");
     //   $("#receipt").modal();
     // });
     // $("#newOrder").click(function() {
     // });
-});
+    });
