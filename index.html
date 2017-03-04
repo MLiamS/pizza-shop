@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
-  <title>Pizza Shop</title>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="jumbotron">
-        <h1 class="title">Franks Killer Pies</h1>
-      </div>
-      <div class="col-md-6">
-        <form id="pizzaForm">
-          <label for="orderName">Please enter your name:</label>
-          <input id="orderName" type="text">
-          <div class="checkboxs">
-            <label for="toppings">Plese select the topppings you'd like:</label><br>
-            <input type="checkbox" name="toppings" value=" Pepperoni">Pepperoni<br>
-            <input type="checkbox" name="toppings" value=" Salami">Salami<br>
-            <input type="checkbox" name="toppings" value=" Onions">Onions<br>
-            <input type="checkbox" name="toppings" value=" Tomatoes">Tomatoes<br>
-            <input type="checkbox" name="toppings" value=" Garlic">Garlic<br>
-            <input type="checkbox" name="toppings" value=" Peppers">Peppers<br>
-            <input type="checkbox" name="toppings" value=" Sausage">Sausage<br>
-            <input type="checkbox" name="toppings" value=" Ham">Ham<br>
-            <input type="checkbox" name="toppings" value=" Cyanide">Cyanide<br>
-          </div>
-          <label for="pizzaSize">Please select a size:</label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="Small" checked>
-              Small
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="Medium">
-              Medium
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="Large">
-              Large
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="Extra-Large">
-              Extra Large
-            </label>
-          </div>
-          <button type="submit" name="button">Add to Order</button>
-
-        </form>
-      </div>
-      <div class="col-md-6">
-        <div class="well">
-          <h2>Your Current Order</h2>
-
-          <ul id="order"></ul>
-          <!-- <div class="modal-body">
-            <h3 class="receipt"></h3> -->
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Pizza Shop</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron">
+          <h1 class="title">Franks Killer Pies</h1>
+        </div>
+          <div class="col-md-6">
+            <form id="pizzaForm">
+              <label for="orderName">Please enter your name:</label>
+                <input id="orderName" type="text">
+                  <div class="checkboxs">
+                    <label for="toppings">Plese select the topppings you'd like:</label><br>
+                    <input type="checkbox" name="toppings" value=" Pepperoni">Pepperoni<br>
+                    <input type="checkbox" name="toppings" value=" Salami">Salami<br>
+                    <input type="checkbox" name="toppings" value=" Onions">Onions<br>
+                    <input type="checkbox" name="toppings" value=" Tomatoes">Tomatoes<br>
+                    <input type="checkbox" name="toppings" value=" Garlic">Garlic<br>
+                    <input type="checkbox" name="toppings" value=" Peppers">Peppers<br>
+                    <input type="checkbox" name="toppings" value=" Sausage">Sausage<br>
+                    <input type="checkbox" name="toppings" value=" Ham">Ham<br>
+                    <input type="checkbox" name="toppings" value=" Cyanide">Cyanide<br>
+                  </div>
+              <label for="pizzaSize">Please select a size:</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Small" checked>
+                Small
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Medium">
+                Medium
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Large">
+                Large
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="Extra-Large">
+                Extra Large
+              </label>
+            </div>
+            <button type="submit" name="button">Add to Order</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <h2>Your Current Order</h2>
+            <ul id="order"></ul>
           </div>
         </div>
       </div>
+      <!-- <div class="modal-body">
+      <h3 class="receipt"></h3> -->
       <!-- <div class="row">
         <div class="modal fade" id="receipt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
@@ -85,9 +83,8 @@
         </div>
       </div> -->
     </div>
-  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
-</body>
+  </body>
 </html>

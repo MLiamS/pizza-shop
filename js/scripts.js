@@ -6,8 +6,8 @@ function Pizza(name, toppings, size )  {
 };
 
 Pizza.prototype.cost=function()  {
-p = 0;
-p += (this.toppings.length*2);
+  p = 0;
+  p += (this.toppings.length*2);
   if (this.size === "Small"){
     p+= 8
   };
@@ -48,11 +48,11 @@ $(function() {
     // addPrice(price, totalPrice);
     // console.log(price, totalPrice);
     // console.log(newPrice);
-    });
-    // $("#place").click(function(){
-    //   $("#items").text("items");
-    //   $("#receipt").modal();
-    // });
-    // $("#newOrder").click(function() {
-    // });
-    });
+  });
+  // $("#place").click(function(){
+  //   $("#items").text("items");
+  //   $("#receipt").modal();
+  // });
+  // $("#newOrder").click(function() {
+  // });
+});
