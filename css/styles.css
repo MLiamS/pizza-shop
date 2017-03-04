@@ -1,5 +1,15 @@
-.title{text-align: center
+
+
+.jumbotron{
+  text-align: center;
+  font-weight: bolder;
+  color: red;
+  font-style: italic;
 }
-.checkboxs{font-size: 20px
+.checkboxs{
+  font-size: 20px
 }
-.col-md-6, .lable{ font-size: 25px;}
+#pizzaForm{
+  font-size: 20px;
+  font-family: monospace;
+}
