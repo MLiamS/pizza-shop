@@ -1,5 +1,5 @@
 
-.deliveryOr, .namePhone, .address, .toppingSize, .order, #addPie, #completePie, #finalOrder {display: none;
+.deliveryOr, .namePhone, .address, .toppingSize, .order, #addPie, #completePie, #pizzaTypeButton {display: none;
 }
 
 .jumbotron{

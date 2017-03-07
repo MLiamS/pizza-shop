@@ -23,71 +23,85 @@ Pizza.prototype.cost = function()  {
 };
 
 
+
 $(function() {
   var totalPrice = 0;
+  var piesTotal = 0;
+  var toppingsTotal = [];
   $("form#pizzaForm").submit(function(event){
     event.preventDefault();
+    var orderName = "";
+    var orderAddress = "";
+    var orderPhone = "";
     var orderTops = [];
     var orderSize = $("input:radio[name=size]:checked").val();
     $("input:checkbox[name=toppings]:checked").each(function(){
       orderTops.push($(this).val());
     });
-
+    orderName = orderName.concat($("#orderName").val());
+    orderAddress = orderAddress.concat($("#orderAddress").val());
+    orderPhone = orderPhone.concat($("#orderPhone").val());
     var newPie  = new Pizza(orderTops, orderSize);
     price = newPie.cost();
     $("#order").append("<li>" +"One " + newPie.size + "</li>");
     $("#order").append("<li>" + "With: " + newPie.toppings + "</li>");
     $("#order").append("<li>" + "At  $" + price + "'s" +"</li>"+"<br>");
-    totalPrice = (totalPrice + price)
-    console.log(totalPrice);
+    totalPrice = (totalPrice + price);
+    piesTotal ++;
+    toppingsTotal = toppingsTotal.concat(newPie.toppings);
+    console.log(totalPrice,piesTotal,toppingsTotal);
     document.getElementById("pizzaForm").reset();
     $(".toppingSize").hide();
     $("#addPie").show();
     $("#completePie").show();
     $(".order").show();
+    totalNumToppings = toppingsTotal.length;
+    $("#items").text("You've ordered " + piesTotal + " pizza(s) with a total of " + totalNumToppings + " topping(s)." +  "For a grand total of $" + totalPrice + ".00's ");
   });
-});
+
 
 var orderName = $("input#orderName").val();
 
-$("#addPie").click(function(){
-  $(".toppingSize").show();
-  $("#addPie").hide();
-  $("#completePie").hide();
-  });
-
-$("#completePie").click(function(){
+$("#createPizza").click(function(){
   $(".deliveryOr").show();
   $("#createPizza").hide();
-  $("#addPie").hide();
-  $("#completePie").hide();
   });
 
-$("#createPizza").click(function(){
-  $(".toppingSize").show();
-  $("#createPizza").hide();
+  $("#pickUp").click(function(){
+    $(".namePhone").show();
+    $(".deliveryOr").hide();
+    $("#pizzaTypeButton").show();
   });
-
-$("#pickUp").click(function(){
-  $(".namePhone").show();
-  $(".finalOrder").show();
-  $(".newOrder").show();
-  $("#finalOrder").show();
-  $(".deliveryOr").hide();
-});
 
   $("#delivery").click(function(){
     $(".namePhone").show();
-    $(".finalOrder").show();
     $(".address").show();
-    $(".newOrder").show();
-    $("#finalOrder").show();
     $(".deliveryOr").hide();
+    $("#pizzaTypeButton").show();
   });
 
-$("#finalOrder").submit(function(){
-  $("#items").text("items");
-  $("#receipt").modal();
-$("#newOrder").click(function() {
+  $("#pizzaTypeButton").click(function(){
+    $("#pizzaTypeButton").hide();
+    $(".namePhone").hide();
+    $(".address").hide();
+    $(".toppingSize").show();
+  });
+
+  $("#addPie").click(function(){
+    $(".toppingSize").show();
+    $("#addPie").hide();
+    $("#completePie").hide();
+  });
+
+
+
+
+
+  $("#completePie").click(function(){
+    $("#items").text("Hi " + orderName + " you have ordered " + piesTotal + " pizza(s) with a total of " + totalNumToppings + " topping(s)." + "For a grand total of $" + totalPrice + ".00 ");
+
+    $("#receipt").modal();
+
 });
+
 });
