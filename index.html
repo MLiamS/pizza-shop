@@ -10,29 +10,20 @@
   <div class="jumbotron">
     <h1 class="title">Franks Killer Pies</h1>
   </div>
+
+  <button  id="createPizza" type="button" name="createPizza">Create your own Pizza</button>
+
   <div class="container">
-  <button type="button" name="button">Create your own Pizza</button>
-
-
+    <div class="row">
+    <div class="col-md-6">
 
     <div class="delivery">
-      <label for="pizzaDelivery"></label>
-      <div class="radio">
-        <label>
-          <input type="radio" name="size" value="pickUp" checked>
-          Pick-Up
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="size" value="delivery">
-          Delivery
-        </label>
-      </div>
+    <button id="pickUp" type="button" name="pickUP">Pick-Up</button>
+    <button id="delivery" type="button" name="Delivery">Delivery</button>
     </div>
-  </div>
 
-  <div class="container">
+
+
     <div class="row justify-content-around">
       <div class="col-md-4">
         <label for="orderName">Name:</label>
@@ -43,31 +34,26 @@
         <input id="orderAddress" type="text">
       </div>
     </div>
-  </div>
 
 
-  <div class="container">
+
     <form id="pizzaForm">
-      <div class="checkboxs">
-      <label for="toppings">Plese select the topppings you'd like:</label><br>
-      <input type="checkbox" name="toppings" value=" Pepperoni">Pepperoni<br>
-      <input type="checkbox" name="toppings" value=" Salami">Salami<br>
-      <input type="checkbox" name="toppings" value=" Onions">Onions<br>
-      <input type="checkbox" name="toppings" value=" Tomatoes">Tomatoes<br>
-      <input type="checkbox" name="toppings" value=" Garlic">Garlic<br>
-      <input type="checkbox" name="toppings" value=" Peppers">Peppers<br>
-      <input type="checkbox" name="toppings" value=" Sausage">Sausage<br>
-      <input type="checkbox" name="toppings" value=" Ham">Ham<br>
-      <input type="checkbox" name="toppings" value=" Cyanide">Cyanide<br>
-      <button type="submit" name="button">Add toppings</button>
+      <div class="col-md-6">
+        <div class="checkboxs">
+          <label for="toppings">Select topppings:</label><br>
+          <input type="checkbox" name="toppings" value=" Pepperoni">Pepperoni<br>
+          <input type="checkbox" name="toppings" value=" Salami">Salami<br>
+          <input type="checkbox" name="toppings" value=" Onions">Onions<br>
+          <input type="checkbox" name="toppings" value=" Tomatoes">Tomatoes<br>
+          <input type="checkbox" name="toppings" value=" Garlic">Garlic<br>
+          <input type="checkbox" name="toppings" value=" Peppers">Peppers<br>
+          <input type="checkbox" name="toppings" value=" Sausage">Sausage<br>
+          <input type="checkbox" name="toppings" value=" Ham">Ham<br>
+          <input type="checkbox" name="toppings" value=" Cyanide">Cyanide<br>
+        </div>
       </div>
-    </form>
-  </div>
-
-
-
-  <div class="container">
-      <label for="pizzaSize">Please select a size:</label>
+      <div class="col-md-6">
+      <label for="pizzaSize">Select size:</label>
       <div class="radio">
         <label>
           <input type="radio" name="size" value="Small" checked>
@@ -94,16 +80,16 @@
       </div>
       <button type="submit" name="button">Add to Order</button>
     </form>
-      <button type="button" name="newPie">Add a Pie</button>
-    </div>
-    <div class="container">
 
+      <button type="button" name="newPie">Add a Pie</button>
+      <button type="button" name="complete">Complete Order</button>
+    </div>
+    </div>
 
       <div class="col-md-6">
-        <div class="well">
           <h2>Your Current Order</h2>
           <ul id="order"></ul>
-        </div>
+
       </div>
     </div>
 <!-- <div class="modal-body">
