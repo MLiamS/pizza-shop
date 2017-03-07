@@ -1,4 +1,6 @@
 
+.deliveryOr, .namePhone, .address, .toppingSize, .order, #addPie, #completePie, #finalOrder {display: none;
+}
 
 .jumbotron{
   text-align: center;

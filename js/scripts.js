@@ -35,26 +35,59 @@ $(function() {
 
     var newPie  = new Pizza(orderTops, orderSize);
     price = newPie.cost();
-    // $("#order").append("<li>" + "Order for:  " + newPie.name + "</li>");
     $("#order").append("<li>" +"One " + newPie.size + "</li>");
     $("#order").append("<li>" + "With: " + newPie.toppings + "</li>");
     $("#order").append("<li>" + "At  $" + price + "'s" +"</li>"+"<br>");
     totalPrice = (totalPrice + price)
     console.log(totalPrice);
     document.getElementById("pizzaForm").reset();
+    $(".toppingSize").hide();
+    $("#addPie").show();
+    $("#completePie").show();
+    $(".order").show();
+  });
+});
 
+var orderName = $("input#orderName").val();
+
+$("#addPie").click(function(){
+  $(".toppingSize").show();
+  $("#addPie").hide();
+  $("#completePie").hide();
   });
 
-  var orderName = $("input#orderName").val();
+$("#completePie").click(function(){
+  $(".deliveryOr").show();
+  $("#createPizza").hide();
+  $("#addPie").hide();
+  $("#completePie").hide();
+  });
 
+$("#createPizza").click(function(){
+  $(".toppingSize").show();
+  $("#createPizza").hide();
+  });
 
-    // addPrice(price, totalPrice);
-    // console.log(price, totalPrice);
-    // console.log(newPrice);
-  // $("#place").click(function(){
-  //   $("#items").text("items");
-  //   $("#receipt").modal();
-  // });
-  // $("#newOrder").click(function() {
-  // });
+$("#pickUp").click(function(){
+  $(".namePhone").show();
+  $(".finalOrder").show();
+  $(".newOrder").show();
+  $("#finalOrder").show();
+  $(".deliveryOr").hide();
+});
+
+  $("#delivery").click(function(){
+    $(".namePhone").show();
+    $(".finalOrder").show();
+    $(".address").show();
+    $(".newOrder").show();
+    $("#finalOrder").show();
+    $(".deliveryOr").hide();
+  });
+
+$("#finalOrder").submit(function(){
+  $("#items").text("items");
+  $("#receipt").modal();
+$("#newOrder").click(function() {
+});
 });
